@@ -1,6 +1,7 @@
 //DEPENDENCIES
 //express
 const express = require("express")
+const routes = require("./routes")
 // DATABASE CONNECTION
 
 // APP/PORT
@@ -12,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
 // ROUTES
-app.get("*", (req, res) => res.send("Testing Message 123"))
+app.use(routes);
 
 
 // START THE SERVER
